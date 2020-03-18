@@ -17,6 +17,11 @@ height = 80.0
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 7 ), ExtResource( 2 ), ExtResource( 8 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 10 ) ],
 "loop": false,
 "name": "Attack",
@@ -34,5 +39,10 @@ shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
-animation = "Attack"
+animation = "idle"
 speed_scale = 7.0
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( 88, 8 )
+enabled = true
+cast_to = Vector2( 0, 8 )
