@@ -19,9 +19,9 @@
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 10 ), ExtResource( 7 ), ExtResource( 3 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 12 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 2 ) ],
-"loop": true,
+"loop": false,
 "name": "damageRecoilRight",
-"speed": 8.0
+"speed": 20.0
 } ]
 
 [node name="World" type="Node"]
@@ -45,6 +45,8 @@ shape = SubResource( 1 )
 scale = Vector2( 0.3625, 0.3625 )
 frames = SubResource( 2 )
 animation = "damageRecoilRight"
+frame = 10
+playing = true
 
 [node name="TileMap" type="TileMap" parent="."]
 format = 1
