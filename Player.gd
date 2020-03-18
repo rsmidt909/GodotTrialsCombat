@@ -3,12 +3,17 @@ extends KinematicBody2D
 var MAX_SPEED = 500
 var ACCELERATION = 20000
 var motion = Vector2.ZERO
+var frameZero = 0
+var frameSeven = 8
+var frame
+
 
 func _process(_delta):
-	if Input.is_action_pressed("ui_select"):
-		$AnimatedSprite.play("LightningAttack")
-	else:
-		$AnimatedSprite.stop()
+	if Input.is_action_just_pressed("ui_select"):
+		$AnimatedSprite.play("Attack")
+		if $AnimatedSprite.get_frame() == frameSeven:
+				$AnimatedSprite.set_frame(frameZero)
+
 
 func _physics_process(delta):
 	var axis = get_input_axis()
