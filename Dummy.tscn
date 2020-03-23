@@ -38,5 +38,6 @@ position = Vector2( 384, 320 )
 cast_to = Vector2( 100, 100 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
 position = Vector2( 384, 320 )
 polygon = PoolVector2Array( 0, -8, 0, -80, -8, -80, -8, 32, -24, 32, -24, 56, 16, 56, 16, 32, 0, 32 )

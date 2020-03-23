@@ -15,7 +15,7 @@ func _ready():
 #	pass
 func getDummyHealth():
 	var dummy = get_parent().get_node("Dummy")
-	stringHealth = str(dummy.currentHealth)
+	stringHealth = str(dummy.currentHealthGet())
 
 func changeHealth():
 	$RichTextLabel.set_bbcode(stringHealth)
