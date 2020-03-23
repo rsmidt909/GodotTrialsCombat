@@ -85,7 +85,7 @@ func apply_movement(acceleration):
 func rayCastDirection(axis):
 # Turn RayCast2D toward movement direction
 	if axis != Vector2.ZERO:
-		$RayCast2D.cast_to = axis.normalized() * 100
+		$RayCast2D.cast_to = axis.normalized() * 60
 
 func checkHit():
 	if $RayCast2D.is_colliding() and attackingFlag == true:

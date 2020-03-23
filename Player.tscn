@@ -45,7 +45,8 @@ position = Vector2( -16, 0 )
 polygon = PoolVector2Array( 64, -56, 64, 72, 88, 72, 88, -56 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -24, -56, -32, -40, -24, -24, -16, -16, -16, -8, -32, -8, -32, 0, -32, 16, -24, 16, -24, 24, -32, 24, -32, 40, -40, 40, -40, 64, -24, 64, -24, 72, 24, 72, 24, 64, 40, 64, 40, 56, 40, 40, 32, 40, 32, 24, 24, 24, 24, 16, 32, 16, 32, -8, 16, -8, 16, -16, 24, -24, 32, -40, 24, -56, 16, -40, 0, -48, -16, -40 )
+visible = false
+polygon = PoolVector2Array( -40, -56, 40, -56, 40, 72, -40, 72 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://PopupDialog.gd" type="Script" id=1]
+[ext_resource path="res://ARCADECLASSIC.TTF" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 2 )
+
+[node name="PopupDialog" type="PopupDialog"]
+margin_left = 456.0
+margin_top = 40.0
+margin_right = 896.0
+margin_bottom = 96.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 432.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

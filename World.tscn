@@ -3,7 +3,7 @@
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Dummy.tscn" type="PackedScene" id=2]
 [ext_resource path="res://ARCADECLASSIC.TTF" type="DynamicFontData" id=3]
-[ext_resource path="res://PopupDialog.gd" type="Script" id=4]
+[ext_resource path="res://VBoxContainer.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -24,26 +24,22 @@ polygon = PoolVector2Array( 0, 0, 1304, 0, 1304, 736, 0, 736, 0, 64, 16, 64, 16,
 [node name="TileMap" type="TileMap" parent="."]
 format = 1
 
-[node name="PopupDialog" type="PopupDialog" parent="."]
-visible = true
-margin_left = 456.0
-margin_top = 40.0
-margin_right = 896.0
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 496.0
+margin_top = 48.0
+margin_right = 808.0
 margin_bottom = 96.0
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="PopupDialog"]
-margin_left = 176.0
-margin_right = 260.0
-margin_bottom = 51.0
-custom_fonts/font = SubResource( 1 )
-text = "HIT"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-[connection signal="hitSignal" from="KinematicBody2D" to="PopupDialog" method="_hitText"]
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+margin_right = 312.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+scroll_active = false
+[connection signal="hitSignal" from="KinematicBody2D" to="VBoxContainer" method="_hitText"]
